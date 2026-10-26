@@ -13,6 +13,8 @@ public static class DroneInput
     public static bool QDown => Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame;
     public static bool RDown => Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame;
     public static bool TDown => Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame;
+    public static bool EDown => Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
+    public static bool FireDown => Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame;
 
     // WASD  (x: A/D, y: W/S)
     public static Vector2 Move
@@ -44,6 +46,8 @@ public static class DroneInput
     public static bool QDown => Input.GetKeyDown(KeyCode.Q);
     public static bool RDown => Input.GetKeyDown(KeyCode.R);
     public static bool TDown => Input.GetKeyDown(KeyCode.T);
+    public static bool EDown => Input.GetKeyDown(KeyCode.E);
+    public static bool FireDown => Input.GetMouseButtonDown(0);
 
     public static Vector2 Move => new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
